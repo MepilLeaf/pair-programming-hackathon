@@ -1,3 +1,10 @@
+@use "../../styles/partials/globals.scss" as *;
+
 .displayed-note {
-    background-color: pink;
+  color: $black;
+  background-color: pink;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
