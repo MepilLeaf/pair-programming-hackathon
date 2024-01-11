@@ -3,8 +3,9 @@ import "./NoteCard.scss";
 export default function NoteCard({ title, date }) {
   return (
     <article className="note-card">
-      <h2 className="note-card__title">{title}</h2>
-      <h2 className="note-card__title">{date}</h2>
+      <h3 className="note-card__title">{title}</h3>
+      <h4 className="note-card__title">{date}</h4>
+      <button className="note-card__delete-button">DELETE</button>
     </article>
   );
 }
