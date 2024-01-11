@@ -11,7 +11,7 @@ export default function DisplayedNote() {
   if (!note) {
     return (
       <section className="displayed-note">
-        <p1>No Note Selected</p1>
+        <p>No Note Selected</p>
       </section>
     );
   }

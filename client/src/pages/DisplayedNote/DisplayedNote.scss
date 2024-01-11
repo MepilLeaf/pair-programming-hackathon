@@ -2,7 +2,8 @@
 
 .displayed-note {
   color: $black;
-  background-color: pink;
+  background-color: $off-white;
+  box-shadow: 0.1rem 0.1rem 0rem 0.1rem $yellow;
   width: 50%;
   display: flex;
   justify-content: space-evenly;
