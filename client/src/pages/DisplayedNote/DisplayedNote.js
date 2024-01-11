@@ -25,9 +25,12 @@ export default function DisplayedNote() {
     const { title, date, content } = note;
     return (
         <section className="displayed-note">
-            <div className="displayed-note__title-and-date">
-                <input className="displayed-note__title" type="text" placeholder="Title" />
-                <h4 className="displayed-note__date">{date}</h4>
+            <div className="displayed-note__header">
+                <div className="displayed-note__title-and-date">
+                    <input className="displayed-note__title" type="text" placeholder="Title" />
+                    <h4 className="displayed-note__date">{date}</h4>
+                </div>
+                <button className="displayed-note__save-button">SAVE</button>
             </div>
             <textarea className="displayed-note__content" name="content" id="content" cols="30" rows="10" placeholder="Enter your note here!"></textarea>
         </section>
