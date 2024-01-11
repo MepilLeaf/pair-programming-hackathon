@@ -1,3 +1,4 @@
+import DeleteIcon from '../../assets/icons/icon-delete.svg'
 import "./NoteCard.scss";
 
 export default function NoteCard({ title, date }) {
