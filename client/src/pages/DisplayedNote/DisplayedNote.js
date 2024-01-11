@@ -4,24 +4,32 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function DisplayedNote() {
-  const [note, setNote] = useState(null);
+    const [note, setNote] = useState(null);
 
-  useEffect(() => {});
+    useEffect(() => {
+        setNote({
+            title: 'Test Title',
+            content: 'Test content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eveniet eum inventore incidunt pariatur eligendi quas quibusdam, placeat molestiae, quis consequatur sequi non tenetur optio unde possimus, modi ducimus voluptatibus!',
+            date: '01/11/2024'
+        })
+    }, []);
 
-  if (!note) {
+    if (!note) {
+        return (
+            <section className="displayed-note">
+                <p>No Note Selected</p>
+            </section>
+        );
+    }
+
+    const { title, date, content } = note;
     return (
-      <section className="displayed-note">
-        <p1>No Note Selected</p1>
-      </section>
+        <section className="displayed-note">
+            <div className="displayed-note__title-and-date">
+                <input className="displayed-note__title" type="text" placeholder="Title" />
+                <h4 className="displayed-note__date">{date}</h4>
+            </div>
+            <textarea className="displayed-note__content" name="content" id="content" cols="30" rows="10" placeholder="Enter your note here!"></textarea>
+        </section>
     );
-  }
-
-  const { title, date, content } = note;
-  return (
-    <section className="displayed-note">
-      <h2 className="displayed-note__title">{title}</h2>
-      <h4 className="displayed-note__date">{date}</h4>
-      <p className="displayed-note__content">{content}</p>
-    </section>
-  );
 }

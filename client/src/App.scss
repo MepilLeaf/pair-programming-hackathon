@@ -1,5 +1,11 @@
+@use "./styles/partials/globals.scss" as *;
+
+body {
+    background-color: $white;
+}
+
 main {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
 }
