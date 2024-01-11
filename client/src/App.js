@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import NoteDisplay from "./components/NotesDisplay/NoteDisplay"
+import DisplayedNote from "./pages/DisplayedNote/DisplayedNote"
 import './App.scss';
 
 function App() {
@@ -7,7 +7,8 @@ function App() {
     <main>
       <BrowserRouter>
         <Routes>
-          <Route path='/notes/:noteId' element={NoteDisplay} />
+          <Route path='/' element={<DisplayedNote />} />
+          <Route path='/notes/:noteId' element={<DisplayedNote />} />
         </Routes>
       </BrowserRouter>
     </main>
